@@ -1,10 +1,27 @@
 <!doctype html>
-<html lang="en">
+<html lang="es" data-bs-theme="light">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>client</title>
+    <meta name="description" content="Stockia: inventario, ventas y precios en bolívares actualizados con la tasa del día." />
+    <meta name="theme-color" content="#4f46e5" />
+    <title>Stockia · Inventario y ventas para tu tienda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script>
+      // Aplica el tema antes de que cargue React, para evitar el parpadeo blanco
+      (function () {
+        try {
+          var t = localStorage.getItem('stockia-theme');
+          if (t !== 'light' && t !== 'dark') {
+            t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          }
+          document.documentElement.setAttribute('data-bs-theme', t);
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
