@@ -184,3 +184,11 @@ html { scroll-behavior: smooth; }
 .st-bars span { flex: 1; border-radius: 0.35rem 0.35rem 0 0; background: linear-gradient(180deg, var(--bs-primary), rgba(var(--bs-primary-rgb), 0.35)); }
 .st-step-num { width: 2.5rem; height: 2.5rem; border-radius: 50%; display: grid; place-items: center; font-weight: 700; color: #fff; background: var(--st-btn-bg); }
 .st-cta { border-radius: 1.25rem; padding: 3rem 1.5rem; color: #fff; background: linear-gradient(135deg, #4f46e5, #7c3aed 60%, #0ea5e9); }
+
+/* ===== Inventario ===== */
+.st-thumb { object-fit: cover; border-radius: .5rem; background: var(--st-hover); flex-shrink: 0; }
+.st-thumb-empty { display: flex; align-items: center; justify-content: center; color: var(--bs-secondary-color); }
+.st-product-card .st-card-img { aspect-ratio: 4 / 3; width: 100%; object-fit: cover; background: var(--st-hover); }
+.st-product-card.is-inactive { opacity: .6; }
+.st-chip-scroll { display: flex; gap: .5rem; overflow-x: auto; padding-bottom: .25rem; scrollbar-width: thin; }
+.st-chip-scroll > * { flex: 0 0 auto; }

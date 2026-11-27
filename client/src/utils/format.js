@@ -5,3 +5,12 @@ export const getInitials = (name = '') =>
 
 export const formatDate = (iso) =>
   new Date(iso).toLocaleDateString('es-VE', { day: '2-digit', month: 'short', year: 'numeric' });
+
+const moneyFormatter = new Intl.NumberFormat('es-VE', {
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2,
+});
+
+export const formatUSD = (n) => (n == null ? '—' : `$${moneyFormatter.format(n)}`);
+// Listo para la fase 3 (precio en Bs = USD × tasa del día)
+export const formatBs = (n) => (n == null ? '—' : `Bs. ${moneyFormatter.format(n)}`);

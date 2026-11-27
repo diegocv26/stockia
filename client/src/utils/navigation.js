@@ -15,7 +15,7 @@ export const NAV_GROUPS = [
   {
     title: 'Inventario',
     items: [
-      { to: '/app/inventario', label: 'Productos', icon: 'bi-box-seam', phase: 2 },
+      { to: '/app/inventario', implemented: true, label: 'Productos', icon: 'bi-box-seam', phase: 2 },
       { to: '/app/movimientos', label: 'Movimientos', icon: 'bi-arrow-left-right', phase: 5 },
       { to: '/app/compras', label: 'Compras', icon: 'bi-truck', phase: 5, roles: ['admin'] },
       { to: '/app/proveedores', label: 'Proveedores', icon: 'bi-shop', phase: 5, roles: ['admin'] },

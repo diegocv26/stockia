@@ -7,6 +7,7 @@ import Register from './pages/Auth/Register.jsx';
 import ComingSoon from './pages/dashboard/ComingSoon.jsx';
 import Overview from './pages/dashboard/Overview.jsx';
 import Users from './pages/dashboard/Users.jsx';
+import Inventory from './pages/dashboard/Inventory.jsx';
 import Landing from './pages/Landing/Landing.jsx';
 import NotFound from './pages/NotFound.jsx';
 import ProtectedRoute from './routes/ProtectedRoute.jsx';
@@ -27,6 +28,7 @@ export default function App() {
         <Route path="/app" element={<ProtectedRoute><DashboardLayout /></ProtectedRoute>}>
           <Route index element={<Overview />} />
           <Route path="usuarios" element={<RoleRoute roles={['admin']}><Users /></RoleRoute>} />
+          <Route path="inventario" element={<Inventory />} />
           {PENDING_ITEMS.map((item) => (
             <Route
               key={item.to}
